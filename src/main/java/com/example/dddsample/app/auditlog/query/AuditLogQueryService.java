@@ -4,7 +4,7 @@ import java.util.Optional;
 
 import com.example.dddsample.app.auditlog.query.dto.AuditLogPageQuery;
 import com.example.dddsample.app.auditlog.query.dto.AuditLogQueryResult;
-import com.example.dddsample.common.PageResult;
+import com.example.dddsample.shared.PageResult;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Max;

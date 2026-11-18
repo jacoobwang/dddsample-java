@@ -17,9 +17,9 @@ import com.example.dddsample.app.auditlog.command.dto.AuditLogSaveCommand;
 import com.example.dddsample.app.auditlog.query.AuditLogQueryService;
 import com.example.dddsample.app.auditlog.query.dto.AuditLogPageQuery;
 import com.example.dddsample.app.auditlog.query.dto.AuditLogQueryResult;
-import com.example.dddsample.common.BaseResponse;
-import com.example.dddsample.common.PageResult;
-import com.example.dddsample.common.RequestContext;
+import com.example.dddsample.shared.BaseResponse;
+import com.example.dddsample.shared.PageResult;
+import com.example.dddsample.shared.RequestContext;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Max;

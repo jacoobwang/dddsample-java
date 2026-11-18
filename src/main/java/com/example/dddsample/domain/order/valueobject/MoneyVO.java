@@ -2,8 +2,8 @@ package com.example.dddsample.domain.order.valueobject;
 
 import java.math.BigDecimal;
 
-import com.example.dddsample.common.BackendErrorEnum;
-import com.example.dddsample.common.BackendException;
+import com.example.dddsample.shared.BackendErrorEnum;
+import com.example.dddsample.shared.BackendException;
 
 public record MoneyVO(BigDecimal amount, String currency) {
 

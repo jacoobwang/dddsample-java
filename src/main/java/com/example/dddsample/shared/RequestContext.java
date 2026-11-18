@@ -1,4 +1,4 @@
-package com.example.dddsample.common;
+package com.example.dddsample.shared;
 
 public final class RequestContext {
 

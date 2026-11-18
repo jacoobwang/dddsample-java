@@ -18,9 +18,9 @@ import com.example.dddsample.app.order.command.dto.OrderShipCommand;
 import com.example.dddsample.app.order.query.OrderQueryService;
 import com.example.dddsample.app.order.query.dto.OrderDetailQueryResult;
 import com.example.dddsample.app.order.query.dto.OrderPageQuery;
-import com.example.dddsample.common.BaseResponse;
-import com.example.dddsample.common.PageResult;
-import com.example.dddsample.common.RequestContext;
+import com.example.dddsample.shared.BaseResponse;
+import com.example.dddsample.shared.PageResult;
+import com.example.dddsample.shared.RequestContext;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Max;

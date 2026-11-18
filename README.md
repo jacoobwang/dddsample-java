@@ -22,7 +22,7 @@ adapter  ──▶  app  ──▶  domain
 | `app` | Write use-case orchestration (`CommandService`), read contracts (`QueryService`), cross-context inbound contracts (`Port`), transaction boundaries | `domain`, `shared`, other contexts' `app..port` | `adapter`, `infra`, DO, Mapper, 3rd-party SDKs |
 | `domain` | Aggregates/Entities, Value Objects (`*VO`), Validators (`*Validator`), External Policy interfaces (`*PolicyService`), Repository interfaces (`*Repo`) | Pure Java, `shared`, common exceptions | Spring, ORM, HTTP/Cloud SDKs, `adapter`/`app`/`infra` |
 | `infra` | Repository implementations (`repoimpl`), Query implementations (`queryimpl`), Policy implementations (`policyimpl`), DO, Mapper, MapStruct Converters | `app`, `domain`, `shared`, frameworks/drivers | `adapter` |
-| `shared` | Stable cross-context enums and contract constants | Pure Java | Any business layer (`adapter`/`app`/`domain`/`infra`) |
+| `shared` | Cross-context shared enums, unified exception (`BackendException`), `PageResult`, protocol envelope (`BaseResponse`), `RequestContext` | Pure Java | Any business layer (`adapter`/`app`/`domain`/`infra`), Spring |
 
 ---
 
@@ -51,8 +51,8 @@ adapter  ──▶  app  ──▶  domain
 
 ```text
 src/main/java/com/example/dddsample/
-├── common/                        # BaseResponse envelope, PageResult, unified BackendException
-├── shared/order/                  # Cross-layer shared enum OrderStatusEnum
+├── shared/                        # Cross-layer shared primitives (BackendException, PageResult, BaseResponse, RequestContext)
+│   └── order/                     # Cross-layer shared enum OrderStatusEnum
 │
 ├── # [Example A] Core Business Context: order (State Machine, VO, Validator, Policy, Port, Display Response)
 ├── domain/order/

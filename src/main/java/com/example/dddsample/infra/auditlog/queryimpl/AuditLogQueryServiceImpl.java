@@ -9,7 +9,7 @@ import org.springframework.validation.annotation.Validated;
 import com.example.dddsample.app.auditlog.query.AuditLogQueryService;
 import com.example.dddsample.app.auditlog.query.dto.AuditLogPageQuery;
 import com.example.dddsample.app.auditlog.query.dto.AuditLogQueryResult;
-import com.example.dddsample.common.PageResult;
+import com.example.dddsample.shared.PageResult;
 import com.example.dddsample.infra.auditlog.converter.AuditLogConverter;
 import com.example.dddsample.infra.auditlog.mapper.AuditLogMapper;
 

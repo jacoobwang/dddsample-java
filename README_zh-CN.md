@@ -22,7 +22,7 @@ adapter  ──▶  app  ──▶  domain
 | `app` | 写用例编排（`CommandService`）、读用例契约（`QueryService`）、跨域入站契约（`Port`）、事务边界 | `domain`、`shared`、其他域 `app..port` | `adapter`、`infra`、DO、Mapper、第三方 SDK |
 | `domain` | 聚合根/实体、值对象（`*VO`）、校验器（`*Validator`）、外部策略接口（`*PolicyService`）、仓储接口（`*Repo`） | 纯 Java、`shared`、统一异常 | Spring、ORM、HTTP/AWS SDK、`adapter`/`app`/`infra` |
 | `infra` | 仓储实现（`repoimpl`）、查询实现（`queryimpl`）、外部策略实现（`policyimpl`）、DO、Mapper、MapStruct Converter | `app`、`domain`、`shared`、技术框架 | `adapter` |
-| `shared` | 跨上下文共享的稳定枚举与契约常量 | 纯 Java | 任何业务层（`adapter`/`app`/`domain`/`infra`） |
+| `shared` | 跨上下文共享枚举、统一异常（`BackendException`）、通用分页（`PageResult`）、响应封套（`BaseResponse`）、`RequestContext` | 纯 Java | 任何业务层（`adapter`/`app`/`domain`/`infra`）、Spring |
 
 ---
 
@@ -51,8 +51,8 @@ adapter  ──▶  app  ──▶  domain
 
 ```text
 src/main/java/com/example/dddsample/
-├── common/                        # 基础响应封套 BaseResponse、分页 PageResult、统一异常 BackendException
-├── shared/order/                  # 跨层共享枚举 OrderStatusEnum
+├── shared/                        # 跨层共享基础契约（BackendException、PageResult、BaseResponse、RequestContext）
+│   └── order/                     # 跨层共享枚举 OrderStatusEnum
 │
 ├── # [示例 A] 核心业务上下文：order（含聚合状态机、VO、Validator、Policy、Port、展示变形 Response）
 ├── domain/order/

@@ -1,4 +1,4 @@
-package com.example.dddsample.common;
+package com.example.dddsample.shared;
 
 import java.util.List;
 

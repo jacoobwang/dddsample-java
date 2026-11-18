@@ -15,7 +15,7 @@ import com.example.dddsample.adapter.order.dto.OrderDisplayResponse;
 import com.example.dddsample.app.auditlog.command.dto.AuditLogSaveCommand;
 import com.example.dddsample.app.order.command.dto.OrderCreateCommand;
 import com.example.dddsample.app.order.command.dto.OrderShipCommand;
-import com.example.dddsample.common.BaseResponse;
+import com.example.dddsample.shared.BaseResponse;
 
 @SpringBootTest
 class OrderAndAuditLogFlowTest {

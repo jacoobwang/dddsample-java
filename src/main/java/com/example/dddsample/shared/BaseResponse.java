@@ -1,4 +1,4 @@
-package com.example.dddsample.common;
+package com.example.dddsample.shared;
 
 public record BaseResponse<T>(int code, String message, T data) {
 

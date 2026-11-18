@@ -64,7 +64,13 @@ public class ArchUnitAllRulesTest {
     @ArchTest
     static final ArchRule sharedDoesNotDependOnBusinessLayers = noClasses()
         .that().resideInAnyPackage(SHARED)
-        .should().dependOnClassesThat().resideInAnyPackage(ADAPTER, APP, DOMAIN, INFRA);
+        .should().dependOnClassesThat().resideInAnyPackage(ADAPTER, APP, DOMAIN, INFRA, "org.springframework..");
+
+    @ArchTest
+    static final ArchRule nonAdapterMustNotUseRequestContextOrBaseResponse = noClasses()
+        .that().resideInAnyPackage(APP, DOMAIN, INFRA)
+        .should().dependOnClassesThat().haveSimpleName("RequestContext")
+        .orShould().dependOnClassesThat().haveSimpleName("BaseResponse");
 
     @ArchTest
     static final ArchRule appDtosMustBeRecords = classes()

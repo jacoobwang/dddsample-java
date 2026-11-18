@@ -9,7 +9,7 @@ import org.springframework.validation.annotation.Validated;
 import com.example.dddsample.app.order.query.OrderQueryService;
 import com.example.dddsample.app.order.query.dto.OrderDetailQueryResult;
 import com.example.dddsample.app.order.query.dto.OrderPageQuery;
-import com.example.dddsample.common.PageResult;
+import com.example.dddsample.shared.PageResult;
 import com.example.dddsample.infra.order.converter.OrderConverter;
 import com.example.dddsample.infra.order.dataobject.OrderDO;
 import com.example.dddsample.infra.order.mapper.OrderMapper;

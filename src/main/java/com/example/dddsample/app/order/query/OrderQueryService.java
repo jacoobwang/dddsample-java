@@ -4,7 +4,7 @@ import java.util.Optional;
 
 import com.example.dddsample.app.order.query.dto.OrderDetailQueryResult;
 import com.example.dddsample.app.order.query.dto.OrderPageQuery;
-import com.example.dddsample.common.PageResult;
+import com.example.dddsample.shared.PageResult;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Max;

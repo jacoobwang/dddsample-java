@@ -2,8 +2,8 @@ package com.example.dddsample.domain.order.validator;
 
 import java.util.Optional;
 
-import com.example.dddsample.common.BackendErrorEnum;
-import com.example.dddsample.common.BackendException;
+import com.example.dddsample.shared.BackendErrorEnum;
+import com.example.dddsample.shared.BackendException;
 import com.example.dddsample.domain.order.Order;
 
 public final class OrderQuotaValidator {
